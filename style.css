@@ -195,7 +195,7 @@ h4 {
 
 .socials {
     display: block;
-    position: absolute;
+    position: sticky;
     bottom: 4%;
     right: 0;
     padding-right: 2em;
