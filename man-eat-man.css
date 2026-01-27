@@ -1,0 +1,375 @@
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+    background-color: #0A0504;
+}
+
+header ul {
+    max-width: fit-content;
+    margin: 0.2rem;
+    padding: 0 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14pt;
+}
+
+header p {
+    color: goldenrod;
+    margin: 0.2rem;
+}
+
+header a {
+    text-decoration: none;
+    text-underline-offset: 0.575rem;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-shadow: #000;
+    text-decoration-color: red;
+    cursor: pointer;
+}
+
+.back-container {
+    display: flex;
+    position: absolute;
+    top: 2vh;
+    height: 2vh;
+    z-index: 2;
+    background: #000;
+    width: 100%;
+}
+
+.back-container a {
+    left: 6.75em;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    height: 2vh;
+    overflow: hidden;
+    align-content: center;
+    z-index: 3;
+}
+
+.back-container a, nav a {
+    text-align: center;
+    align-self: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.back-container a:hover, nav a:hover {
+    text-decoration: underline;
+    text-shadow: #000;
+    cursor: pointer;
+    background-color: darkred;
+}
+
+.nav-container {
+    display: flex;
+    margin: auto;
+}
+
+.full-width {
+    max-width: max-content;
+    position: absolute;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: url("images/plaster-bg.jpg");
+    background-size: contain;
+}
+
+div b {
+    color: red;
+}
+
+ul u {
+    color: darkgoldenrod;
+}
+
+article {
+    width: calc(100% + 4rem);
+    margin: -2rem;
+    display: block;
+    line-height: 1.5em;
+    top: 0;
+    overflow: hidden;
+    /* padding-left: 2em;
+    padding-bottom: 1em; */
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    top: 0;
+    height: max-content;
+    align-content: center;
+    overflow: hidden;
+}
+
+.banner img {
+    background-image: url("images/mem-banner-lowres.jpg");
+    max-width: 100%;
+    height: auto;
+    object-fit: contain !important;
+    object-position: center;
+}
+
+
+.type-logo-container {
+    top: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.type-logo {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 6vh;
+    width: 28%;
+    height: auto;
+    object-fit: contain !important;
+    object-position: center;
+}
+
+.subtitle {
+    position: relative;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 18pt;
+    font-weight: 100;
+    line-height: 24pt;
+    letter-spacing: 2pt;
+    padding-top: 4rem;
+    color: white;
+}
+
+
+.slice-container {
+    position: relative;
+    display: block;
+    height: fit-content;
+    padding: 2rem 18%;
+    align-items: center;
+}
+
+
+.slice {
+    display: flex;
+    position: relative;
+    height: fit-content;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.slice img {
+    padding: 2em;
+    margin: auto;
+}
+
+.slice div {
+    margin: auto;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 18pt;
+    font-weight: 100;
+    line-height: 28pt;
+    letter-spacing: 2pt;
+}
+
+
+.align-start {
+    align-self: flex-start;
+    left: 0;
+}
+
+
+.align-end {
+    align-self: flex-end;
+    right: 0;
+}
+
+
+.padding-no-top-bottom {
+    padding: 0 4rem;
+}
+
+
+.padding-medium {
+    padding: 4rem;
+}
+
+
+.padding-large {
+    padding: 6rem;
+}
+
+
+#links-offset {
+    display: block;
+    position: relative;
+    height: 0;
+    margin: -4rem 0 0 0;
+}
+
+
+.links-container {
+    position: relative;
+    display: block;
+    height: fit-content;
+    align-items: center;
+    /* padding-top: 8em; */
+}
+
+
+.links {
+    margin: auto;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 20%;
+    display: block;
+    /* background-color: black; */
+    background: url("images/hero-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.links h1 {
+    text-align: center;
+}
+
+
+.link {
+    margin: auto;
+    display: flex;
+}
+
+.links-info {
+    margin: auto;
+    width: 82.5%;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 16pt;
+    font-weight: 100;
+    line-height: 32pt;
+    letter-spacing: 1pt;
+}
+
+.flex {
+    display: flex;
+}
+
+.features-container {
+    position: relative;
+    display: block;
+    height: fit-content;
+    align-items: center;
+}
+
+.features {
+    position: relative;
+    display: block;
+    height: min-content;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    background: url("images/hero-bg.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.features-summary {
+    margin: auto;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 24pt;
+    font-weight: 100;
+    line-height: 48pt;
+    letter-spacing: 2pt;
+}
+
+.features-body {
+    padding: 2rem;
+}
+
+ul {
+    letter-spacing: 2pt;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 16pt;
+    font-weight: 100;
+    line-height: 24pt;
+}
+
+.features-body li {
+    margin: 2rem 1rem;
+}
+
+ul b {
+    margin: 2rem -1rem;
+    list-style-type: none;
+}
+
+.gallery-container {
+    max-width: 70%; 
+    display: flex;
+    position: relative;
+    height: fit-content;
+}
+
+.gallery-container span {
+    display: inline-block;
+    flex-flow: row nowrap;
+    align-self: center;
+    align-items: stretch;
+    margin: auto;
+}
+
+.gallery-container img {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+#gallery-offset {
+    display: block;
+    position: relative;
+    height: 0;
+    margin: -3rem 0;
+}
+
+
+
+a img {
+    align-self: center;
+    max-width: 24px;
+    max-height: 24px;
+    margin: 4px;
+}

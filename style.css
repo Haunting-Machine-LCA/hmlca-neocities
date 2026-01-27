@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    /* Type */
+    --line-height: 1.5rem;
+    --font-size-small: 16pt;
+    --h1-line-height: 24pt;
+
+    /* Margins */
+    --margin: 16px;
+    --h1-margin-top-bottom: 32px;
+
+    /* Padding */
+    --h1-padding-top-bottom: 3rem;
+}
+
+
+/* Mobile displays */
+@media only screen and (max-width: 600px) {
+    :root {
+        --font-size-small: 12pt;
+        --line-height: 1rem;
+
+        /* Headings */
+        --h1-margin-top-bottom: 24px;
+    }
+}
+
+
+/* Small desktop/tablet displays */
+@media only screen and (min-width: 601px) {
+    :root {
+
+    }
+}
+
+
+/* qHD+ desktop displays */
+@media only screen and (min-width: 768px) {
+    :root {
+
+    }
+}
+
+/* QHD+ desktop displays */
+@media only screen and (min-width: 1024px) {
+    :root {
+
+    }
+}
+
+
+* {
+    margin: auto;
+    box-sizing: border-box;
+    color: white;
+    background-color: transparent;
+}
+
+
+body, html {
+    background-color: black;
+    /* Type */  
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height);
+    
+    /* Margin */  
+    /* margin: var(--margin); */
+    /* background-image: url("images/hm-background.jpg"); */
+    /* background-size: auto; */
+    /* background-repeat: no-repeat; */
+}
+
+h1 {
+    margin: var(--h1-margin-top-bottom), var(--h1-margin-top-bottom), auto, auto;
+    padding: var(--h1-padding-top-bottom), var(--h1-padding-top-bottom), auto, auto;
+    font-family: "Kameron", serif;
+    font-size: 42pt;
+    letter-spacing: -1pt;
+    line-height: var(--h1-line-height);
+    mix-blend-mode: difference;
+    padding-top: 0.875rem;
+}
+
+
+h2 {
+
+}
+
+
+h3 {
+
+}
+
+
+h4 {
+
+}
+
+#evil {
+  position: fixed;
+  right: -5%;
+  bottom: -5%;
+  min-width: 110%;
+  min-height: 110%;
+  z-index: -666;
+}
+
+/*#region developer credits*/
+
+#main {
+    width: 16em;
+    position: absolute;
+    display: block;
+    line-height: 1.5em;
+    bottom: 0;
+    padding-left: 2em;
+    padding-bottom: 2rem;
+    transform: translateY(4vh);
+    opacity: 0;
+    left: 0;
+    transition: all 1s;
+    z-index: 10;
+}
+
+#main h1 {
+    /* padding-bottom: 1.5rem; */
+    line-height: 16pt;
+    /* color: black; */
+}
+
+#main article p {
+    padding-top: calc(1rem + 8pt);
+}
+
+
+#main p {
+    padding-bottom: 1rem;
+}
+
+#main.loaded {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.developers {
+    display: block;
+    margin-top: -0.25rem;
+    line-height: 0.875rem;
+    margin-bottom: 0.875rem;
+}
+
+.developers-item {
+    font-size: 12pt;
+    font-weight: 600;
+    padding-top: -1rem;
+    letter-spacing: 0.5pt;
+    word-spacing: 0.5em;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    transition:
+        color 1s,
+        text-decoration-color 1s
+    ;
+}
+
+.developers-item:hover {
+    color: #f00;
+    text-decoration-color: #f00;
+}
+
+/*#endregion developer credits*/
+
+.info {
+    font-size: 12pt;
+    line-height: 26pt;
+    margin-top: -4pt;
+}
+
+.socials {
+    display: block;
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 0.5pt;
+    word-spacing: 0.5em;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    transition:
+        color 1s;
+    text-align: right;
+}
+
+.socials a:hover {
+    color: #f00;
+    text-decoration-color: #f00;
+}
+
+
+#wip {
+    display: none;
+    opacity: 0%;
+    transition: all 0.667s;
+    pointer-events: none;
+}
+
+
+#wip h2 {
+    color: red;
+}
+
+
+.modal {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-content: center;
+    margin: auto;
+}
+
+.modal-content {
+    background-color: black;
+    border: 2px solid red;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+}
