@@ -8,9 +8,9 @@ socials.innerHTML = `
     <br/>
     <a href="https://www.tumblr.com/hauntingmachinelca">tumblr</a>
     <br/>
-    <a href="https://www.tumblr.com/hauntingmachinelca">instagram</a>
+    <a href="https://www.tumblr.com/hauntingmachinelca" class="wip-link">instagram</a>
     <br/>
-    <a href="https://www.tumblr.com/hauntingmachinelca">tiktok</a>
+    <a href="https://www.tumblr.com/hauntingmachinelca" class="wip-link">tiktok</a>
 </section>
 `;
 

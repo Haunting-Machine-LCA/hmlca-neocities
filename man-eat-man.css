@@ -196,11 +196,11 @@ article {
 .slice div {
     padding: 1rem;
     margin: auto;
-    font-family: "Cal Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14pt;
-    font-weight: 50;
+    font-weight: 200;
     line-height: 24pt;
-    letter-spacing: 2pt;
+    letter-spacing: 1pt;
 }
 
 
@@ -258,17 +258,24 @@ article {
     /* height: 20%; */
     display: block;
     /* background-color: black; */
-    background-image: url("images/hero-bg.jpg");
-    background-repeat: round;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 
+
+}
+
+.border-image {
+    border-image-source: url("images/hero-bg.jpg");
+    border-image-slice: 10% fill;
+    border-image-width: 48px;
+    border-image-repeat: repeat;
 }
 
 
 .links h1 {
     text-align: center;
+}
+
+.links span {
+    color: red;
 }
 
 .link {
@@ -299,12 +306,17 @@ article {
 
 .links-info {
     margin: auto;
-    max-width: 72.5%;
-    font-family: "Cal Sans", sans-serif;
+    max-width: 50%;
+    font-family: "Open Sans", sans-serif;
     font-size: 14pt;
     font-weight: 50;
     line-height: 24pt;
     letter-spacing: 1pt;
+}
+
+.links-info i {
+    color:red;
+    margin: 0 0.25rem;
 }
 
 .flex {
@@ -323,19 +335,19 @@ article {
     display: block;
     height: min-content;
     align-items: center;
-    padding: 2rem 18%;
-    background: url("images/hero-bg.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    padding: 10%;
+    max-width: 50vw;
+    /* background-position: center; */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
 }
 
 .features-summary {
     margin: auto;
     font-family: "Cal Sans", sans-serif;
-    font-size: 14pt;
+    font-size: 24pt;
     font-weight: 50;
-    line-height: 24pt;
+    line-height: 48pt;
     letter-spacing: 2pt;
 }
 
@@ -345,7 +357,7 @@ article {
 
 ul {
     letter-spacing: 2pt;
-    font-family: "Cal Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14pt;
     font-weight: 50;
     line-height: 24pt;
@@ -420,4 +432,11 @@ a p {
     display: inline-block;
     color: inherit;
     transition: inherit;
+}
+
+#footer-offset {
+    display: block;
+    position: relative;
+    height: 0;
+    margin-top: -6rem;
 }
