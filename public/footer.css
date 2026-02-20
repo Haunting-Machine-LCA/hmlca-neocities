@@ -10,7 +10,7 @@ footer {
     height: fit-content;
     overflow: hidden;
     justify-content: center;
-    margin: 0;
+    margin-top: auto;
     font-size: 10pt;
     line-height: 8pt;
     padding: 0.25rem;

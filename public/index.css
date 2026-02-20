@@ -1,12 +1,18 @@
 @import "./style.css";
+/* @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
 
 /*#region variables */
 
 :root {
-    --project-image-max-width: 37.5%;
-    --project-image-right-offset: 0%;
+    --project-image-max-width: 100vw;
+    --project-image-right-offset: 50vw;
     
     /* Project nav */
+    --nav-display: flex;
+    --alt-nav-display: none;
+    --nav-width: 60%;
+
     --project-nav-font-size: 96pt;
     --project-nav-subtitle-font-size: 24pt;
     --project-nav-margin-top-bottom: 32px;
@@ -14,47 +20,71 @@
     --project-nav-padding-right: 12rem;
     --project-nav-line-height: calc(var(--project-nav-font-size) * 1.05);
     --project-nav-odd-item-bottom-margin: 3vh;
+    --project-nav-spacer-height: 4vh;
+    
+    /* Typefaces */
+    /* --man-eat-man-font-family: "UnifrakturCook", serif; */
+    --man-eat-man-font-family: "Fruktur", serif;
+
+    --debug-color: transparent;
 }
 
 
 /* Mobile displays */
 @media (max-width: 600px) {
     :root {
-        --project-image-right-offset: 0;
+        --nav-display: none;
+        --alt-nav-display: flex;
         --project-nav-font-size: 48pt;
-        --project-nav-subtitle-font-size: 24pt;
-        --project-image-max-width: 20%;
-        --project-image-right-offset: 0;
+        --project-nav-subtitle-font-size: 14pt;
+        --project-nav-margin-top-bottom: 10px;
         --project-nav-line-height: var(--project-nav-font-size);
+        --debug-color: darkred;
+    }
+}
+
+/* Tablet and small desktop displays */
+@media (min-width: 601px) and (max-width: 1199px) {
+    :root {
+        --nav-width: 80%;
+        --project-image-max-width: 80vw;
+        --project-image-right-offset: 10vw;
+        --project-nav-font-size: 72pt;
+        --project-nav-subtitle-font-size: 18pt;
+        --project-nav-line-height: var(--project-nav-font-size);
+        --project-nav-margin-top-bottom: 14px;
+        --project-nav-padding-right: 30vw;
+        --project-nav-spacer-height: 1vh;
+        --debug-color: red;
     }
 }
 
 
-/* Small desktop/tablet displays */
-@media (min-width: 601px) {
+/* HD+ desktop displays */
+@media (min-width: 1200px) and (max-width: 1920px) {
     :root {
-        --project-nav-font-size: 32pt;
-        --project-nav-subtitle-font-size: 24pt;
-        --project-nav-line-height: var(--project-nav-font-size);
-    }
-}
-
-
-/* qHD+ desktop displays */
-@media (min-width: 768px) {
-    :root {
-        
+        --project-image-max-width: 60vw;
+        --project-image-right-offset: 0vw;
+        --project-nav-font-size: 96pt;
+        --project-nav-subtitle-font-size: 20pt;
+        --project-nav-margin-top-bottom: 18px;
+        --project-nav-line-height: calc(var(--project-nav-font-size) * 0.85);
+        --project-nav-spacer-height: 2vh;
+        --debug-color: yellow;
     }
 }
 
 
 /* QHD+ desktop displays */
-@media (min-width: 1024px) {
+@media (min-width: 1921px) {
     :root {
-        --project-image-max-width: 50%;
-        --project-image-right-offset: -21.5%;
+        --project-image-max-width: 60vw;
+        --project-image-right-offset: 0vw;
+        /* --project-image-right-offset: -21.5%; */
         --project-nav-font-size: 112pt;
+        --project-nav-subtitle-font-size: 24pt;
         --project-nav-line-height: var(--project-nav-font-size);
+        --debug-color: green;
     }
 }
 
@@ -63,6 +93,7 @@
 
 body {
     background-color: transparent;
+    /* background-color: var(--debug-color); */
 }
 
 /*#region project links */
@@ -82,10 +113,10 @@ body {
     position: relative;
     top: 0;
     left: 0;
-    width: auto;
+    width: 100%;
     height: auto;
     
-    padding: var(--project-nav-padding);
+    /* padding: var(--project-nav-padding); */
     padding-right: var(--project-nav-padding-right);
 
     margin: 
@@ -98,6 +129,13 @@ body {
         padding 1s,
         color 1s;
     /* margin-top: 0.25rem; */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 
@@ -122,7 +160,7 @@ body {
     left: 20vw;
     margin: auto;
     pointer-events: none;
-    /* max-width: var(--project-image-max-width); */
+    max-width: var(--project-image-max-width);
 }
 
 
@@ -137,8 +175,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: visible;
-    object-fit: fill;
-    width: 100vw;
+    /* object-fit: fill; */
     height: 100vh;
 }
 
@@ -154,7 +191,7 @@ body {
     position: absolute;
 
     /* display: flex; */
-    width: 140vw;
+    width: calc(var(--project-image-max-width) * 2.334);/* 140vw;*/
     left: -35vw;
     top: -50vh;
     /* margin: auto; */
@@ -164,7 +201,7 @@ body {
 #project-image {
     /* background-color: red; */
     position: absolute;
-    width: 60vw;
+    width: var(--project-image-max-width);/* 60vw; */
     /* top: -10vh; */
     left: 15vw;
     opacity: 0;
@@ -240,7 +277,7 @@ body {
 
 
 #nav-spacer {
-    height: 2vh;
+    height: var(--project-nav-spacer-height);
 }
 
 
@@ -286,12 +323,12 @@ nav div {
 
 .nav-link-container {
     overflow: hidden;
-    display: flex;
+    display: var(--nav-display);
     flex-direction: column;
     /* top: -20vh; */
     perspective: 10rem;
     height: 90%;
-    width: 60%;
+    width: var(--nav-width);
     align-items: baseline;
     margin: auto;
     opacity: 0;
@@ -382,3 +419,8 @@ nav div {
 }
 
 
+#man-eat-man-nav {
+    font-family: var(--man-eat-man-font-family);
+    font-weight: 700;
+    font-style: normal;
+}

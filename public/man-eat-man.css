@@ -1,3 +1,25 @@
+:root {
+    --info-links-width: 50%;
+    /* --slice-width: 50%; */
+}
+
+
+/* HD+ desktop displays */
+@media (min-width: 1200px) and (max-width: 1920px) {
+    :root {
+        --info-links-width: 67%;
+    }
+}
+
+/* QHD+ desktop displays */
+@media only screen and (min-width: 1921px) {
+    :root {
+        
+    }
+}
+
+
+
 header {
     display: flex;
     position: fixed;
@@ -152,7 +174,7 @@ article {
     position: relative;
     margin: auto;
     top: 6vh;
-    width: 28%;
+    width: 37%;
     height: auto;
     object-fit: contain !important;
     object-position: center;
@@ -165,7 +187,7 @@ article {
     font-weight: 100;
     line-height: 24pt;
     letter-spacing: 2pt;
-    padding-top: 4rem;
+    padding-top: 2rem;
     color: white;
 }
 
@@ -306,7 +328,7 @@ article {
 
 .links-info {
     margin: auto;
-    max-width: 50%;
+    max-width: var(--info-links-width);
     font-family: "Open Sans", sans-serif;
     font-size: 14pt;
     font-weight: 50;
