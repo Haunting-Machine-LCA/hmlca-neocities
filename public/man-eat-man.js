@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.addEventListener('scroll', hasScrolled);
             });
         }); 
-    
-});
+    const enlargeImages = document.querySelectorAll('#enlarge-image');
+    enlargeImages.forEach(image => {
+        image.addEventListener('mouseenter', () => {
 
-
+    });
+});});

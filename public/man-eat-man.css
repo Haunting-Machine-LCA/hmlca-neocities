@@ -147,7 +147,7 @@ article {
 }
 
 .banner img {
-    background-image: url("images/mem-banner-lowres.jpg");
+    /* background-image: url("images/mem-banner-lowres.png"); */
     max-width: 100%;
     height: auto;
     object-fit: contain !important;
@@ -395,7 +395,7 @@ ul b {
 }
 
 .gallery-container {
-    max-width: 70%; 
+    max-width: 70%;
     display: flex;
     position: relative;
     height: fit-content;
@@ -430,22 +430,22 @@ div .link-row {
 }
 
 
-a .link {
+a.link {
     display: inline-block;
     position: relative;
     margin: auto;
 }
 
 
-a img {
+a.link img {
     align-self: center;
-    max-width: 24px;
-    max-height: 24px;
-    margin: 4px;
+    max-width: 256px;
+    /* maxheight: 256px; */
+    margin: 24px;
     transition: inherit;
 }
 
-a:hover img {
+a.link:hover img {
     filter: invert(81%) sepia(98%) saturate(7500%) hue-rotate(2deg) brightness(103%) contrast(104%);
 
 }
